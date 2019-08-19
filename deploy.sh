@@ -10,14 +10,14 @@ npm run build
 cd docs/.vuepress/dist
 
 #创建.nojekyll 防止Github Pages build错误
-touch .nojekyll
+# touch .nojekyll
 
 git init
 git add -A
 git commit -m 'deploy'
 
-#git push -f "https://${access_token}@github.com/lwll/better-call-me-pumpkin.git" master:gh-pages
+git push -f "https://github.com/lwll/better-call-me-pumpkin.git" master:gh-pages
 
-git push -f git@github.com:lwll/better-call-me-pumpkin.git master:gh-pages
+# git push -f git@github.com:lwll/better-call-me-pumpkin.git master:gh-pages
 
 cd -

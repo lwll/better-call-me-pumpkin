@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /home.jpg
-actionText: start →
-actionLink: /test/
+actionText: click here!
+actionLink: /tools/
 
-footer: MIT Licensed | Copyright © 2018-lwll
+footer: MIT Licensed | Copyright © 2019-lwsmilence
 ---

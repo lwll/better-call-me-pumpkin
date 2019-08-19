@@ -2,7 +2,7 @@ const utils = require('./utils')
 
 module.exports = {
     title: 'better-call-me-pumpkin',
-    description: '苏平江写文字的地方',
+    description: 'Recording...',
     base: '/better-call-me-pumpkin/',
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
@@ -14,15 +14,35 @@ module.exports = {
                 link: '/'
             },
             {
-              text: '测试',
-              link: '/test/'
+              text: '小工具',
+              link: '/tools/'
+            },
+            {
+              text: '小记',
+              link: '/notes/'
+            },
+            {
+              text: '网站',
+              link: '/website/'
+            },
+            {
+              text: '文章',
+              link: '/article/'
+            },
+            {
+              text: 'Blog',
+              link: '/blog/'
+            },
+            {
+              text: '随笔',
+              link: '/essay/'
             }
         ],
+        // sidebar: 'auto',
         sidebar: utils.inferSiderbars(),
-        lastUpdated: '上次更新',
-        editLinks: true,
+        lastUpdated: 'Last Updated',
+        repo: 'lwll/better-call-me-pumpkin',
         docsDir: 'docs',
-        editLinkText: '在 GitHub 上编辑此页',
         sidebarDepth: 3
     },
     configureWebpack: {
@@ -32,7 +52,6 @@ module.exports = {
           }
         }
       },
-      ga: 'UA-109340118-1',
       markdown: {
         config: md => {
           // use more markdown-it plugins!

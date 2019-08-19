@@ -2,7 +2,7 @@ const fs = require('fs')
 const readline = require('readline')
 const { pathResolve, isGithub } = require('./utils.js.js')
 
-const filePath = pathResolve('docs/test/README.md')
+const filePath = pathResolve('docs/tools/README.md')
 
 const getRepoName = url => {
   const reg = /github\.com\/(.*)\)/

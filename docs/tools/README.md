@@ -1,20 +1,3 @@
-<p align="center">
-  <img width="320" src="https://i.postimg.cc/Sxy0rKYC/home.png">
-</p>
-
-Base on `vuepress`
-
-在线地址：https://lwll.github.io/better-call-me-pumpkin
-
-**这是一个个人记录向的项目**
-- [小工具](#%E5%B0%8F%E5%B7%A5%E5%85%B7)
-  * [前端工具库](#%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%BA%93)
-  * [Vue](#vue)
-    + [组件](#%E7%BB%84%E4%BB%B6)
-  * [Chrome插件](#chrome%E6%8F%92%E4%BB%B6)
-  * [其他](#%E5%85%B6%E4%BB%96)
-- [小记](#%E5%B0%8F%E8%AE%B0)
-  * [npm](#npm)
 # 小工具
 
 >  这里主要记录平时用过觉得不错的小工具，包括工具库，浏览器插件等
@@ -53,19 +36,3 @@ github上有一个[chrome插件英雄榜](https://github.com/zhaoolee/ChromeAppH
 - [Everything](https://www.voidtools.com/zh-cn/ ) 搜索文件神器
 - [cmder](https://cmder.net/ ) windows下强大的命令行工具
 - [Typora](https://typora.io/ ) 免费、简洁的本地Markdown编辑器
-# 小记
-
->  这里主要记录平时遇到的各个小知识点
-
-## npm
-
-
-
-- 通过修改[npmrc](https://docs.npmjs.com/files/npmrc )文件可以直接修改npm的配置。系统中存在多个npmrc文件，作用优先级为：项目级、用户级... 所以如果项目中使用了公司的内部npm服务器时，可以在项目的根目录下单独建立一个npmrc文件，设置registry为公司的内部地址。然后再全局设置npm的registry为淘宝镜像：
-
-  ```ba
-  npm config set registry https://registry.npm.taobao.org
-  ```
-
-  这样就可以在其他项目中愉快的使用npm了
-
