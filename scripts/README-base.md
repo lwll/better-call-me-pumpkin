@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="320" src="https://i.postimg.cc/Sxy0rKYC/home.png">
+  <img src="https://i.postimg.cc/Sxy0rKYC/home.png">
 </p>
 
 Base on `vuepress`
