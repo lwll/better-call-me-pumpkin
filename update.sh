@@ -3,4 +3,4 @@ set -e
 
 git add -A
 git commit -m 'deploy'
-git push origin
+git push "https://github.com/lwll/better-call-me-pumpkin.git"
