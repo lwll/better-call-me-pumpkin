@@ -35,7 +35,7 @@ npm run build
 
 ## 有关
 
-本项目相应的后台使用node.js开发，[地址在这里](https://github.com/lwll/egg-lobes )
+`本项目相应的后台使用node.js开发`，[地址在这里](https://github.com/lwll/egg-lobes )
 
 ## 开发日志
 
