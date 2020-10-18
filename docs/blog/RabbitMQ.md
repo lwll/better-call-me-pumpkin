@@ -191,3 +191,24 @@ public class RabbitConfig {
 }
 ```
 
+### 声明Queue、Exchange并添加绑定关系
+
+**这里只展示direct Exchange相关的操作，其他的类似**
+
+```java
+@Bean
+public void bookQueue() {
+    rabbitAdmin.declareQueue(new Queue("bookQueue"));
+}
+
+@Bean
+public void bookExchange() {
+    rabbitAdmin.declareExchange(new DirectExchange("book.direct"));
+}
+
+@Bean
+public void bookBinding() {
+    rabbitAdmin.declareBinding(new Binding("bookQueue", Binding.DestinationType.QUEUE, "book.direct", "book", null));
+}
+```
+
