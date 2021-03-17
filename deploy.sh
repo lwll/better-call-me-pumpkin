@@ -16,7 +16,10 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f "https://github.com/lwll/better-call-me-pumpkin.git" master:gh-pages
+#git push -f "https://github.com/lwll/better-call-me-pumpkin.git" master:gh-pages
+
+git push -f "https://gitee.com/lwsmilence/better-call-me-pumpkin.git" master:gh-pages
+
 
 # git push -f git@github.com:lwll/better-call-me-pumpkin.git master:gh-pages
 
