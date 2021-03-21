@@ -139,11 +139,30 @@ class Digraph {
 
 ### 2. DFS（深度优先搜索）
 
+#### 维基百科定义：
+
+> Depth-First-Search是一种用于遍历或搜索树或图的算法。这个算法会 **尽可能深**地搜索树地分支。当结点`v`的所在边都已被探寻过，搜索将 **回溯** 到发现结点`v`的那条边的起始节点。这一过程一直进行到已发现从源结点可达的所有结点为止。如果还存在未发现的结点，则选择其中一个作为源结点 并重复以上过程，整个进程反复进行直到所有结点都被访问为止。
+
 ### 3. 回溯算法
 
-解决一个回溯问题，实际上就是一个决策树的遍历过程。
+#### 维基百科定义:
 
-回溯算法的框架：
+>  采用试错的思想，尝试分步地去解决一个问题。在分分步解决问题的过程中，当它通过尝试发现现有的分步答案不能得到有效的正确的解答的时候，它将取消上一步甚至是上几步的计算，再通过其它的可能的分步解答再次尝试寻找问题的答案。回溯法通常用最简单的递归方法来实现，在反复重复上诉的步骤后可能出现两种情况：
+>
+> - 找到一个可能存在的正确的答案；
+> - 在尝试了所有可能的分步方法后宣告该问题没有答案。
+
+#### 与DFS的关系：
+
+回溯算法强调了深度优先遍历思想的用途，用一个 **不断变化**的变量，在尝试各种可能的过程中，搜索需要的结果。强调了 **回退 **操作对于搜索的合理性。而深度优先遍历强调一种遍历的思想。
+
+#### 回溯算法的框架：
+
+解决一个回溯问题，实际上就是一个决策树的遍历过程。需要思考以下3个问题：
+
+1. 路径：已经做出的选择
+2. 选择列表：当前可以做的选择
+3. 结束条件：到达决策树底层，无法再做选择的条件
 
 ```python
 result = []
@@ -157,5 +176,73 @@ def backtrack(路径， 选择列表):
         撤销选择
 ```
 
+#### 算法题解
 
+[N皇后](https://leetcode-cn.com/problems/n-queens/)
+
+```typescript
+let result
+function solveNQueens(n: number): string[][] {
+  result = []
+  let board = new Array(n)
+  for (let i = 0; i < n; i++) {
+    board[i] = new Array(n).fill('.')
+  }
+  
+  backtrack(board, 0)
+  return result
+};
+
+const backtrack = (board, row: number) => {
+  // 确定结束条件
+  if (row === board.length) {
+    
+    let oneTry = board.slice()
+    for (let i = 0; i < board.length; i++) {
+      oneTry[i] = oneTry[i].join('')
+    }    
+    result.push(oneTry)
+    return;
+  }
+
+  for (let i = 0, l = board.length; i < l; i++) {    
+    if (!isValid(board, row, i)) continue
+    board[row][i] = 'Q'
+    backtrack(board, row + 1)
+
+    board[row][i] = '.'
+  }
+
+
+}
+
+/**
+ * 判断board[row][col]是否可以放皇后
+ * @param board 当前棋盘的布局
+ * @param row 棋盘行数
+ * @param col 棋盘列数
+ */
+const isValid = (board: string[][], row: number, col: number): boolean => {
+  // 判断列方向是否有皇后
+  for (let i = 0; i < row; i++) {
+    if (board[i][col] === 'Q') {
+      return false
+    }
+  }
+  // 判断左上方是否有皇后
+  for (let i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
+    if (board[i][j] === 'Q') {
+      return false
+    }
+  }
+
+  // 判断右上方是否有皇后
+  for (let i = row - 1, j = col + 1; i >= 0 && j < board.length; i--, j++) {
+    if (board[i][j] === 'Q') {
+      return false
+    }
+  }
+  return true
+}
+```
 
