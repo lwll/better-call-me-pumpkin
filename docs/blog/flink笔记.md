@@ -60,7 +60,9 @@ Flink为流式/批式处理应用程序的开发提供了不同级别的抽象
 
 ### 事件事件和水印
 
+![A data stream with events (in order) and watermarks](https://ci.apache.org/projects/flink/flink-docs-release-1.13/fig/stream_watermark_in_order.svg)
 
+![A data stream with events (out of order) and watermarks](https://ci.apache.org/projects/flink/flink-docs-release-1.13/fig/stream_watermark_out_of_order.svg)
 
 ## 数据管道 & ETL
 
