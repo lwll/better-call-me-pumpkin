@@ -19,6 +19,6 @@
     "markdown-it-include": "^1.0.0",
     "markdown-toc": "1.2.0",
     "prettier": "^1.14.0",
-    "vuepress": "^0.14.1"
+    "vuepress": "^1.9.7"
   }
 }
